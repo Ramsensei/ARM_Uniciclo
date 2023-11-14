@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Thu Nov  9 11:05:14 2023
-Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Analysis & Elaboration Status : Successful - Mon Nov 13 23:45:13 2023
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : arm
-Top-level Entity Name : top
+Top-level Entity Name : alu
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

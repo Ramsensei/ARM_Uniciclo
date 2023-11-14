@@ -14,7 +14,7 @@ module alu(input logic [31:0] SrcA, SrcB,
 			  alu_adder sum(SrcA,mux_output,ALUControl[0],sum_output,cout);
 			  assign A_or_B=SrcA || SrcB;
 			  assign A_and_B=SrcA && SrcB;
-			  mux4 #(32) mux4(sum_output,A_and_B,A_or_B,ALUControl,mux4_output);
+			  mux4 #(32) mux4(sum_output,A_or_B,A_and_B,ALUControl,mux4_output);
 			  
 			  assign ALUFlags[0] =  ~ALUControl[1] && (sum_output[31]||SrcA[31]) && ~(ALUControl[0]||SrcA[31]||SrcB[31]);
 			  assign ALUFlags[1] = 	~ALUControl[1] && cout;

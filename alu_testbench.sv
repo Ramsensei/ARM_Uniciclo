@@ -6,7 +6,7 @@ module alu_testbench;
     logic [31:0] ALUResult;
     logic [3:0] ALUFlags;
 
-    alu_1 alu_inst (
+    alu alu_inst (
         .SrcA(SrcA),
         .SrcB(SrcB),
         .ALUControl(ALUControl),
