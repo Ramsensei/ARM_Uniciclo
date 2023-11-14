@@ -1,6 +1,6 @@
 Flow report for arm
-Thu Nov  2 10:07:26 2023
-Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Thu Nov  9 11:05:14 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,8 +41,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Thu Nov  2 10:07:26 2023          ;
-; Quartus Prime Version       ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Flow Status                 ; Successful - Thu Nov  9 11:05:14 2023          ;
+; Quartus Prime Version       ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name               ; arm                                            ;
 ; Top-level Entity Name       ; top                                            ;
 ; Family                      ; Cyclone V                                      ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/02/2023 10:07:13 ;
+; Start date & time ; 11/09/2023 11:05:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; arm                 ;
 +-------------------+---------------------+
@@ -74,7 +74,9 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 185410942242985.169894123305404        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 1098132577915.169954950126536          ; --            ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mux4_tb                           ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_testbench                     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; testbench                         ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -84,10 +86,35 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim (SystemVerilog)               ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; mux4.sv                                ; --            ; --          ; mux4_tb                           ;
+; EDA_TEST_BENCH_FILE                  ; mux4_tb.sv                             ; --            ; --          ; mux4_tb                           ;
+; EDA_TEST_BENCH_FILE                  ; mux2.sv                                ; --            ; --          ; mux4_tb                           ;
+; EDA_TEST_BENCH_FILE                  ; alu.sv                                 ; --            ; --          ; alu_testbench                     ;
+; EDA_TEST_BENCH_FILE                  ; alu_testbench.sv                       ; --            ; --          ; alu_testbench                     ;
 ; EDA_TEST_BENCH_FILE                  ; testbench.sv                           ; --            ; --          ; testbench                         ;
 ; EDA_TEST_BENCH_FILE                  ; top.sv                                 ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; adder.sv                               ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; alu_adder.sv                           ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; arm.sv                                 ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; condlogic.sv                           ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; controller.sv                          ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; datapath.sv                            ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; decoder.sv                             ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; dmem.sv                                ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; extend.sv                              ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; flopenr.sv                             ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; flopr.sv                               ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; imem.sv                                ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; mux2.sv                                ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; mux4.sv                                ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; regfile.sv                             ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_FILE                  ; alu.sv                                 ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mux4_tb                                ; --            ; --          ; mux4_tb                           ;
+; EDA_TEST_BENCH_MODULE_NAME           ; alu_testbench                          ; --            ; --          ; alu_testbench                     ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; testbench                              ; --            ; --          ; testbench                         ;
 ; EDA_TEST_BENCH_NAME                  ; testbench                              ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; alu_testbench                          ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; mux4_tb                                ; --            ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
@@ -106,8 +133,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:14     ; 1.0                     ; 4799 MB             ; 00:00:22                           ;
-; Total                  ; 00:00:14     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 4797 MB             ; 00:00:20                           ;
+; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:20                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,7 +143,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+------------------+------------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; Ramsenseis-PC    ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Elaboration ; LAPTOP-2T28LR2L  ; Windows 10 ; 10.0       ; x86_64         ;
 +------------------------+------------------+------------+------------+----------------+
 
 

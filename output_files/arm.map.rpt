@@ -1,6 +1,6 @@
 Analysis & Elaboration report for arm
-Thu Nov  2 10:07:26 2023
-Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Thu Nov  9 11:05:14 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
 ---------------------
@@ -19,19 +19,26 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
  11. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:ra2mux
  12. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:resmux
  13. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:srcbmux
- 14. Analysis & Elaboration Settings
- 15. Port Connectivity Checks: "arm:arm|datapath:dp|mux2:ra1mux"
- 16. Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd2"
- 17. Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd1"
- 18. Analysis & Elaboration Messages
- 19. Analysis & Elaboration Suppressed Messages
+ 14. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux2:mux2
+ 15. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|alu_adder:sum
+ 16. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4
+ 17. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4|mux2:mux0
+ 18. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4|mux2:mux1
+ 19. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4|mux2:muxi
+ 20. Analysis & Elaboration Settings
+ 21. Port Connectivity Checks: "arm:arm|datapath:dp|alu:alu|mux4:mux4"
+ 22. Port Connectivity Checks: "arm:arm|datapath:dp|mux2:ra1mux"
+ 23. Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd2"
+ 24. Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd1"
+ 25. Analysis & Elaboration Messages
+ 26. Analysis & Elaboration Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -51,8 +58,8 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Nov  2 10:07:26 2023          ;
-; Quartus Prime Version         ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Analysis & Elaboration Status ; Successful - Thu Nov  9 11:05:14 2023          ;
+; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                 ; arm                                            ;
 ; Top-level Entity Name         ; top                                            ;
 ; Family                        ; Cyclone V                                      ;
@@ -71,8 +78,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -182,6 +189,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux2:mux2 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|alu_adder:sum ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4|mux2:mux0 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4|mux2:mux1 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4|mux2:muxi ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -269,6 +336,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:arm|datapath:dp|alu:alu|mux4:mux4" ;
++-----------+-------+----------+------------------------------------+
+; Port      ; Type  ; Severity ; Details                            ;
++-----------+-------+----------+------------------------------------+
+; d2[31..1] ; Input ; Info     ; Stuck at GND                       ;
+; d3[31..1] ; Input ; Info     ; Stuck at GND                       ;
++-----------+-------+----------+------------------------------------+
+
+
 +-------------------------------------------------------------+
 ; Port Connectivity Checks: "arm:arm|datapath:dp|mux2:ra1mux" ;
 +------+-------+----------+-----------------------------------+
@@ -305,127 +382,91 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Thu Nov  2 10:07:12 2023
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Thu Nov  9 11:05:01 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arm -c arm --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file alu_adder.sv
+    Info (12023): Found entity 1: alu_adder File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/alu_adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_testbench.sv
+    Info (12023): Found entity 1: alu_testbench File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/alu_testbench.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: alu File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/alu.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
-    Info (12023): Found entity 1: testbench File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/testbench.sv Line: 1
+    Info (12023): Found entity 1: testbench File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/testbench.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
-    Info (12023): Found entity 1: regfile File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/regfile.sv Line: 1
+    Info (12023): Found entity 1: regfile File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/regfile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
-    Info (12023): Found entity 1: mux2 File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/mux2.sv Line: 1
+    Info (12023): Found entity 1: mux2 File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/mux2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopr.sv
-    Info (12023): Found entity 1: flopr File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/flopr.sv Line: 1
+    Info (12023): Found entity 1: flopr File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/flopr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopenr.sv
-    Info (12023): Found entity 1: flopenr File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/flopenr.sv Line: 1
+    Info (12023): Found entity 1: flopenr File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/flopenr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extend.sv
-    Info (12023): Found entity 1: extend File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/extend.sv Line: 1
+    Info (12023): Found entity 1: extend File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/extend.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
-    Info (12023): Found entity 1: decoder File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/decoder.sv Line: 1
+    Info (12023): Found entity 1: decoder File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/decoder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
-    Info (12023): Found entity 1: datapath File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 1
+    Info (12023): Found entity 1: datapath File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/datapath.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
-    Info (12023): Found entity 1: controller File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/controller.sv Line: 1
+    Info (12023): Found entity 1: controller File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/controller.sv Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file condlogic.sv
-    Info (12023): Found entity 1: condlogic File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/condlogic.sv Line: 1
-    Info (12023): Found entity 2: condcheck File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/condlogic.sv Line: 25
+    Info (12023): Found entity 1: condlogic File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/condlogic.sv Line: 1
+    Info (12023): Found entity 2: condcheck File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/condlogic.sv Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file arm.sv
-    Info (12023): Found entity 1: arm File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/arm.sv Line: 1
-Warning (12019): Can't analyze file -- file testbech.sv is missing
+    Info (12023): Found entity 1: arm File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/arm.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top.sv
-    Info (12023): Found entity 1: top File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/top.sv Line: 1
+    Info (12023): Found entity 1: top File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/top.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file imem.sv
-    Info (12023): Found entity 1: imem File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/imem.sv Line: 1
+    Info (12023): Found entity 1: imem File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/imem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file dmem.sv
-    Info (12023): Found entity 1: dmem File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/dmem.sv Line: 1
+    Info (12023): Found entity 1: dmem File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/dmem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
-    Info (12023): Found entity 1: adder File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/adder.sv Line: 1
+    Info (12023): Found entity 1: adder File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
+    Info (12023): Found entity 1: mux4 File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/mux4.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4_tb.sv
+    Info (12023): Found entity 1: mux4_tb File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/mux4_tb.sv Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "arm" for hierarchy "arm:arm" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/top.sv Line: 8
-Info (12128): Elaborating entity "controller" for hierarchy "arm:arm|controller:c" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/arm.sv Line: 15
-Info (12128): Elaborating entity "decoder" for hierarchy "arm:arm|controller:c|decoder:dec" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/controller.sv Line: 17
-Info (12128): Elaborating entity "condlogic" for hierarchy "arm:arm|controller:c|condlogic:cl" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/controller.sv Line: 21
-Info (12128): Elaborating entity "flopenr" for hierarchy "arm:arm|controller:c|condlogic:cl|flopenr:flagreg1" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/condlogic.sv Line: 13
-Info (12128): Elaborating entity "condcheck" for hierarchy "arm:arm|controller:c|condlogic:cl|condcheck:cc" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/condlogic.sv Line: 17
-Info (12128): Elaborating entity "datapath" for hierarchy "arm:arm|datapath:dp" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/arm.sv Line: 22
-Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm|datapath:dp|mux2:pcmux" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 21
-Info (12128): Elaborating entity "flopr" for hierarchy "arm:arm|datapath:dp|flopr:pcreg" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 22
-Info (12128): Elaborating entity "adder" for hierarchy "arm:arm|datapath:dp|adder:pcadd1" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 23
-Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm|datapath:dp|mux2:ra1mux" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 27
-Info (12128): Elaborating entity "regfile" for hierarchy "arm:arm|datapath:dp|regfile:rf" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 31
-Info (12128): Elaborating entity "extend" for hierarchy "arm:arm|datapath:dp|extend:ext" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 34
-Warning (12125): Using design file alu.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: alu File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 1
-Info (12128): Elaborating entity "alu" for hierarchy "arm:arm|datapath:dp|alu:alu" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 38
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(9): variable "SrcA" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 9
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(10): variable "SrcB" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 10
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(12): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 12
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(12): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 12
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(13): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 13
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(13): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 13
-Warning (10199): Verilog HDL Case Statement warning at alu.sv(14): case item expression never matches the case expression File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 14
-Warning (10199): Verilog HDL Case Statement warning at alu.sv(15): case item expression never matches the case expression File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 15
-Warning (10270): Verilog HDL Case Statement warning at alu.sv(11): incomplete case statement has no default case item File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 11
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(17): variable "Res" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 17
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(18): variable "Res" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 18
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(19): variable "Res" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 19
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(20): variable "Res" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 20
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(21): variable "Res" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 21
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(21): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 21
-Warning (10235): Verilog HDL Always Construct warning at alu.sv(21): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 21
-Warning (10240): Verilog HDL Always Construct warning at alu.sv(8): inferring latch(es) for variable "Res", which holds its previous value in one or more paths through the always construct File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[0]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[1]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[2]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[3]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[4]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[5]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[6]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[7]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[8]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[9]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[10]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[11]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[12]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[13]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[14]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[15]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[16]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[17]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[18]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[19]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[20]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[21]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[22]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[23]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[24]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[25]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[26]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[27]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[28]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[29]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[30]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[31]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (10041): Inferred latch for "Res[32]" at alu.sv(8) File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 8
-Info (12128): Elaborating entity "imem" for hierarchy "imem:imem" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/top.sv Line: 10
-Warning (10850): Verilog HDL warning at imem.sv(7): number of words (0) in memory file does not match the number of elements in the address range [0:63] File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/imem.sv Line: 7
-Warning (10030): Net "RAM.data_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/imem.sv Line: 4
-Warning (10030): Net "RAM.waddr_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/imem.sv Line: 4
-Warning (10030): Net "RAM.we_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/imem.sv Line: 4
-Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dmem" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/top.sv Line: 11
-Info (144001): Generated suppressed messages file C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/output_files/arm.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4799 megabytes
-    Info: Processing ended: Thu Nov  2 10:07:26 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:22
+Info (12128): Elaborating entity "arm" for hierarchy "arm:arm" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/top.sv Line: 8
+Info (12128): Elaborating entity "controller" for hierarchy "arm:arm|controller:c" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/arm.sv Line: 15
+Info (12128): Elaborating entity "decoder" for hierarchy "arm:arm|controller:c|decoder:dec" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/controller.sv Line: 17
+Info (12128): Elaborating entity "condlogic" for hierarchy "arm:arm|controller:c|condlogic:cl" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/controller.sv Line: 21
+Info (12128): Elaborating entity "flopenr" for hierarchy "arm:arm|controller:c|condlogic:cl|flopenr:flagreg1" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/condlogic.sv Line: 13
+Info (12128): Elaborating entity "condcheck" for hierarchy "arm:arm|controller:c|condlogic:cl|condcheck:cc" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/condlogic.sv Line: 17
+Info (12128): Elaborating entity "datapath" for hierarchy "arm:arm|datapath:dp" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/arm.sv Line: 22
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm|datapath:dp|mux2:pcmux" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/datapath.sv Line: 21
+Info (12128): Elaborating entity "flopr" for hierarchy "arm:arm|datapath:dp|flopr:pcreg" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/datapath.sv Line: 22
+Info (12128): Elaborating entity "adder" for hierarchy "arm:arm|datapath:dp|adder:pcadd1" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/datapath.sv Line: 23
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm|datapath:dp|mux2:ra1mux" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/datapath.sv Line: 27
+Info (12128): Elaborating entity "regfile" for hierarchy "arm:arm|datapath:dp|regfile:rf" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/datapath.sv Line: 31
+Info (12128): Elaborating entity "extend" for hierarchy "arm:arm|datapath:dp|extend:ext" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/datapath.sv Line: 34
+Info (12128): Elaborating entity "alu" for hierarchy "arm:arm|datapath:dp|alu:alu" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/datapath.sv Line: 38
+Info (10648): Verilog HDL Display System Task info at alu.sv(28): sum = 00000000 File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/alu.sv Line: 28
+Info (10648): Verilog HDL Display System Task info at alu.sv(29): cou = 0 File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/alu.sv Line: 29
+Info (10648): Verilog HDL Display System Task info at alu.sv(30): mux2 = 00000000 File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/alu.sv Line: 30
+Info (10648): Verilog HDL Display System Task info at alu.sv(31): mux4 = 00000000 File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/alu.sv Line: 31
+Info (10648): Verilog HDL Display System Task info at alu.sv(32): ALU = 00000000 File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/alu.sv Line: 32
+Info (12128): Elaborating entity "alu_adder" for hierarchy "arm:arm|datapath:dp|alu:alu|alu_adder:sum" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/alu.sv Line: 14
+Info (12128): Elaborating entity "mux4" for hierarchy "arm:arm|datapath:dp|alu:alu|mux4:mux4" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/alu.sv Line: 17
+Info (12128): Elaborating entity "imem" for hierarchy "imem:imem" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/top.sv Line: 10
+Warning (10850): Verilog HDL warning at imem.sv(7): number of words (2) in memory file does not match the number of elements in the address range [0:63] File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/imem.sv Line: 7
+Warning (10030): Net "RAM.data_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/imem.sv Line: 4
+Warning (10030): Net "RAM.waddr_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/imem.sv Line: 4
+Warning (10030): Net "RAM.we_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/imem.sv Line: 4
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dmem" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/top.sv Line: 11
+Info (144001): Generated suppressed messages file C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/output_files/arm.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Thu Nov  9 11:05:14 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +--------------------------------------------+
 ; Analysis & Elaboration Suppressed Messages ;
 +--------------------------------------------+
-The suppressed messages can be found in C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/output_files/arm.map.smsg.
+The suppressed messages can be found in C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/output_files/arm.map.smsg.
 
 

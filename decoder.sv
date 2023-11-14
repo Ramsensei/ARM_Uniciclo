@@ -36,7 +36,7 @@ case(Funct[4:1])
 		4'b0010: ALUControl = 2'b01; // SUB
 		4'b0000: ALUControl = 2'b10; // AND
 		4'b1100: ALUControl = 2'b11; // ORR
-		default: ALUControl = 2'bx; // unimplemented
+		default: ALUControl = 2'bx;  // unimplemented
 endcase
 
 // update flags if S bit is set (C & V only for arith)

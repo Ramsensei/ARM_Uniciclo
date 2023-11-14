@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 5CGXFC7C7F23C8
 set_global_assignment -name TOP_LEVEL_ENTITY top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:58:03  OCTOBER 24, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -61,12 +61,11 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench -sect
 set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE testbench.sv -section_id testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE top.sv -section_id testbench
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_NAME alu_testbench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id alu_testbench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME alu_testbench -section_id alu_testbench
+set_global_assignment -name SYSTEMVERILOG_FILE alu_adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu_testbench.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE testbench.sv
 set_global_assignment -name SYSTEMVERILOG_FILE regfile.sv
@@ -79,8 +78,39 @@ set_global_assignment -name SYSTEMVERILOG_FILE datapath.sv
 set_global_assignment -name SYSTEMVERILOG_FILE controller.sv
 set_global_assignment -name SYSTEMVERILOG_FILE condlogic.sv
 set_global_assignment -name SYSTEMVERILOG_FILE arm.sv
-set_global_assignment -name SYSTEMVERILOG_FILE testbech.sv
 set_global_assignment -name SYSTEMVERILOG_FILE top.sv
 set_global_assignment -name SYSTEMVERILOG_FILE imem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE dmem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux4.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux4_tb.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME mux4_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mux4_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mux4_tb -section_id mux4_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE testbench.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE top.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE adder.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE alu_adder.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE arm.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE condlogic.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE controller.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE decoder.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE dmem.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE extend.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE flopenr.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE flopr.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE imem.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE mux2.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE mux4.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE regfile.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE alu.sv -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE alu.sv -section_id alu_testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE alu_testbench.sv -section_id alu_testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE mux4.sv -section_id mux4_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE mux4_tb.sv -section_id mux4_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE mux2.sv -section_id mux4_tb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
