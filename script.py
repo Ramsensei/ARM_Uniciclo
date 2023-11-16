@@ -1,19 +1,31 @@
 from PIL import Image
 
-# Ruta de la imagen de entrada
-imagen_entrada = "imagenPrueba.png"
+def guardar_pixeles_en_txt(imagen_path, txt_path):
+    # Abrir la imagen
+    imagen = Image.open(imagen_path)
 
-# Abre la imagen
-imagen = Image.open(imagen_entrada)
+    # Convertir la imagen a escala de grises
+    imagen_gris = imagen.convert('L')
 
-# Obtén los píxeles de la imagen
-pixeles = list(imagen.getdata())
+    # Obtener los valores de los píxeles en escala de grises
+    pixeles_grises = list(imagen_gris.getdata())
 
-# Guarda los píxeles en un archivo de texto
-archivo_salida = "pixeles.txt"
+    # Obtener el ancho y alto de la imagen
+    ancho, alto = imagen_gris.size
 
-with open(archivo_salida, 'w') as archivo:
-    for pixel in pixeles:
-        archivo.write(f"{pixel}\n")
+    # Crear o abrir un archivo de texto para escribir los valores de los píxeles
+    with open(txt_path, 'w') as archivo_txt:
+        # Escribir el ancho, alto y número de píxeles en la primera línea
+        archivo_txt.write(f"{ancho}\n{alto}\n{len(pixeles_grises)}\n")
 
-print(f"Píxeles de la imagen guardados en {archivo_salida}")
+        # Escribir los valores de los píxeles en líneas separadas
+        for pixel in pixeles_grises:
+            archivo_txt.write(f"{pixel}\n")
+
+# Ejemplo de uso
+imagen_path = 'imagenPrueba.png'  # Reemplaza con la ruta de tu imagen
+txt_path = 'pixeles_en_gris.txt'  # Reemplaza con el nombre que desees para el archivo de texto
+
+guardar_pixeles_en_txt(imagen_path, txt_path)
+
+
