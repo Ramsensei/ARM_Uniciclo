@@ -1,5 +1,5 @@
 Analysis & Elaboration report for arm
-Mon Nov 13 23:45:13 2023
+Fri Nov 17 15:28:10 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -9,15 +9,27 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: mux2:mux2
-  5. Parameter Settings for User Entity Instance: alu_adder:sum
-  6. Parameter Settings for User Entity Instance: mux4:mux4
-  7. Parameter Settings for User Entity Instance: mux4:mux4|mux2:mux1
-  8. Parameter Settings for User Entity Instance: mux4:mux4|mux2:muxi
-  9. Analysis & Elaboration Settings
- 10. Port Connectivity Checks: "mux4:mux4"
- 11. Analysis & Elaboration Messages
- 12. Analysis & Elaboration Suppressed Messages
+  4. Parameter Settings for User Entity Instance: arm:arm|controller:c|condlogic:cl|flopenr:flagreg1
+  5. Parameter Settings for User Entity Instance: arm:arm|controller:c|condlogic:cl|flopenr:flagreg0
+  6. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:pcmux
+  7. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|flopr:pcreg
+  8. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|adder:pcadd1
+  9. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|adder:pcadd2
+ 10. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:ra1mux
+ 11. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:ra2mux
+ 12. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:resmux
+ 13. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:srcbmux
+ 14. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux2:mux2
+ 15. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|alu_adder:sum
+ 16. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4
+ 17. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4|mux2:mux1
+ 18. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4|mux2:muxi
+ 19. Analysis & Elaboration Settings
+ 20. Port Connectivity Checks: "arm:arm|datapath:dp|mux2:ra1mux"
+ 21. Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd2"
+ 22. Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd1"
+ 23. Analysis & Elaboration Messages
+ 24. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -44,10 +56,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Nov 13 23:45:13 2023          ;
+; Analysis & Elaboration Status ; Successful - Fri Nov 17 15:28:10 2023          ;
 ; Quartus Prime Version         ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                 ; arm                                            ;
-; Top-level Entity Name         ; alu                                            ;
+; Top-level Entity Name         ; top                                            ;
 ; Family                        ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
 ; Total registers               ; N/A until Partition Merge                      ;
@@ -75,53 +87,153 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux2:mux2 ;
-+----------------+-------+-------------------------------+
-; Parameter Name ; Value ; Type                          ;
-+----------------+-------+-------------------------------+
-; WIDTH          ; 32    ; Signed Integer                ;
-+----------------+-------+-------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|controller:c|condlogic:cl|flopenr:flagreg1 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: alu_adder:sum ;
-+----------------+-------+-----------------------------------+
-; Parameter Name ; Value ; Type                              ;
-+----------------+-------+-----------------------------------+
-; N              ; 32    ; Signed Integer                    ;
-+----------------+-------+-----------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|controller:c|condlogic:cl|flopenr:flagreg0 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux4:mux4 ;
-+----------------+-------+-------------------------------+
-; Parameter Name ; Value ; Type                          ;
-+----------------+-------+-------------------------------+
-; WIDTH          ; 32    ; Signed Integer                ;
-+----------------+-------+-------------------------------+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:pcmux ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux4:mux4|mux2:mux1 ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|flopr:pcreg ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux4:mux4|mux2:muxi ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|adder:pcadd1 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|adder:pcadd2 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:ra1mux ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:ra2mux ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:resmux ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:srcbmux ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux2:mux2 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|alu_adder:sum ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4|mux2:mux1 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|alu:alu|mux4:mux4|mux2:muxi ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -131,7 +243,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; alu                ; arm                ;
+; Top-level entity name                                                           ; top                ; arm                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -212,14 +324,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "mux4:mux4"       ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; d2[31..1] ; Input ; Info     ; Stuck at GND ;
-; d3[31..1] ; Input ; Info     ; Stuck at GND ;
-+-----------+-------+----------+--------------+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "arm:arm|datapath:dp|mux2:ra1mux" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d1   ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd2" ;
++----------+-------+----------+--------------------------------+
+; Port     ; Type  ; Severity ; Details                        ;
++----------+-------+----------+--------------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND                   ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                   ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                   ;
++----------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd1" ;
++----------+-------+----------+--------------------------------+
+; Port     ; Type  ; Severity ; Details                        ;
++----------+-------+----------+--------------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND                   ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                   ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                   ;
++----------+-------+----------+--------------------------------+
 
 
 +---------------------------------+
@@ -228,7 +361,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Mon Nov 13 23:45:02 2023
+    Info: Processing started: Fri Nov 17 15:27:58 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arm -c arm --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -273,21 +406,40 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
     Info (12023): Found entity 1: mux4 File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/mux4.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_tb.sv
     Info (12023): Found entity 1: mux4_tb File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/mux4_tb.sv Line: 1
-Info (12127): Elaborating entity "alu" for the top level hierarchy
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "arm" for hierarchy "arm:arm" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/top.sv Line: 8
+Info (12128): Elaborating entity "controller" for hierarchy "arm:arm|controller:c" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/arm.sv Line: 15
+Info (12128): Elaborating entity "decoder" for hierarchy "arm:arm|controller:c|decoder:dec" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/controller.sv Line: 17
+Info (12128): Elaborating entity "condlogic" for hierarchy "arm:arm|controller:c|condlogic:cl" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/controller.sv Line: 21
+Info (12128): Elaborating entity "flopenr" for hierarchy "arm:arm|controller:c|condlogic:cl|flopenr:flagreg1" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/condlogic.sv Line: 13
+Info (12128): Elaborating entity "condcheck" for hierarchy "arm:arm|controller:c|condlogic:cl|condcheck:cc" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/condlogic.sv Line: 17
+Info (12128): Elaborating entity "datapath" for hierarchy "arm:arm|datapath:dp" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/arm.sv Line: 22
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm|datapath:dp|mux2:pcmux" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 21
+Info (12128): Elaborating entity "flopr" for hierarchy "arm:arm|datapath:dp|flopr:pcreg" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 22
+Info (12128): Elaborating entity "adder" for hierarchy "arm:arm|datapath:dp|adder:pcadd1" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 23
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm|datapath:dp|mux2:ra1mux" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 27
+Info (12128): Elaborating entity "regfile" for hierarchy "arm:arm|datapath:dp|regfile:rf" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 31
+Info (12128): Elaborating entity "extend" for hierarchy "arm:arm|datapath:dp|extend:ext" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 34
+Info (12128): Elaborating entity "alu" for hierarchy "arm:arm|datapath:dp|alu:alu" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/datapath.sv Line: 38
 Info (10648): Verilog HDL Display System Task info at alu.sv(28): sum = 00000000 File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 28
 Info (10648): Verilog HDL Display System Task info at alu.sv(29): cou = 0 File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 29
 Info (10648): Verilog HDL Display System Task info at alu.sv(30): mux2 = 00000000 File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 30
 Info (10648): Verilog HDL Display System Task info at alu.sv(31): mux4 = 00000000 File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 31
 Info (10648): Verilog HDL Display System Task info at alu.sv(32): ALU = 00000000 File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 32
-Info (12128): Elaborating entity "mux2" for hierarchy "mux2:mux2" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 13
-Info (12128): Elaborating entity "alu_adder" for hierarchy "alu_adder:sum" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 14
-Info (12128): Elaborating entity "mux4" for hierarchy "mux4:mux4" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 17
+Info (12128): Elaborating entity "alu_adder" for hierarchy "arm:arm|datapath:dp|alu:alu|alu_adder:sum" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 14
+Info (12128): Elaborating entity "mux4" for hierarchy "arm:arm|datapath:dp|alu:alu|mux4:mux4" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/alu.sv Line: 17
+Info (12128): Elaborating entity "imem" for hierarchy "imem:imem" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/top.sv Line: 10
+Warning (10850): Verilog HDL warning at imem.sv(7): number of words (23) in memory file does not match the number of elements in the address range [0:63] File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/imem.sv Line: 7
+Warning (10030): Net "RAM.data_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/imem.sv Line: 4
+Warning (10030): Net "RAM.waddr_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/imem.sv Line: 4
+Warning (10030): Net "RAM.we_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/imem.sv Line: 4
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dmem" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/top.sv Line: 11
 Info (144001): Generated suppressed messages file C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/ARM_Uniciclo/output_files/arm.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Mon Nov 13 23:45:13 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:21
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Fri Nov 17 15:28:10 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +--------------------------------------------+

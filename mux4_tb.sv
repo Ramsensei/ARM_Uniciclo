@@ -6,7 +6,6 @@ module mux4_tb();
 
     mux4 #(8) mux4_inst (
         .d0(d0),
-        .d1(d1),
         .d2(d2),
         .d3(d3),
         .sel(sel),

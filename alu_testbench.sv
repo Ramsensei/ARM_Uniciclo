@@ -16,22 +16,20 @@ module alu_testbench;
 
     initial begin
         // Test case 1
-        SrcA = 32'h2;
-        SrcB = 32'h1;
-        ALUControl = 2'b01; // You can set the ALU control value as needed
+        SrcA = 32'h7;
+        SrcB = 32'h5;
+        ALUControl = 2'b00; // You can set the ALU control value as needed
 
         // Wait a little bit
         #20;
-		  SrcA = 32'h5;
-        SrcB = 32'h3;
+		  ALUControl = 2'b01;
 		  
 		  #20;
-		  SrcA = 32'h3;
-        SrcB = 32'h5;
+		  ALUControl = 2'b10;
 		  
 		  //ALUControl = 2'b10;
 		  //#20;
-		  
+		  #20;
 		  ALUControl = 2'b11;
 		  #20;
 		  
