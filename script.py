@@ -1,40 +1,38 @@
 from PIL import Image
 
-def guardar_pixeles_en_txt(imagen_path, txt_path):
-    # Abrir la imagen
-    imagen = Image.open(imagen_path)
-
-    # Convertir la imagen a escala de grises
-    imagen_gris = imagen.convert('L')
-
-    # Obtener los valores de los píxeles en escala de grises
-    pixeles_grises = list(imagen_gris.getdata())
-
-    # Obtener el ancho y alto de la imagen
-    ancho, alto = imagen_gris.size
-    num_pixeles = len(pixeles_grises)
-
-    # Crear o abrir un archivo de texto para escribir los valores de los píxeles
-    with open(txt_path, 'w') as archivo_txt:
-        archivo_txt.write(f"WIDTH=32;\nDEPTH=32768;\nADDRESS_RADIX=UNS;\nDATA_RADIX=UNS;\nCONTENT BEGIN\n")
-        archivo_txt.write(f"\t0      :   {ancho};\n")
-        archivo_txt.write(f"\t4      :   {alto};\n")
-        archivo_txt.write(f"\t8      :   {num_pixeles};\n")
-
-        # Escribir los valores de los píxeles de 4 en 4 en el formato especificado
-        for i in range(0, num_pixeles, 4):
-            archivo_txt.write(f"\t{i//4 * 16 + 12}      :   {pixeles_grises[i]};\n")
-            archivo_txt.write(f"\t{i//4 * 16 + 16}      :   {pixeles_grises[i+1]};\n")
-            archivo_txt.write(f"\t{i//4 * 16 + 20}      :   {pixeles_grises[i+2]};\n")
-            archivo_txt.write(f"\t{i//4 * 16 + 24}      :   {pixeles_grises[i+3]};\n")
-
-        archivo_txt.write("END;")
+def image_to_grayscale_mif(image_path, output_path):
+    # Abre la imagen
+    image = Image.open(image_path)
+    
+    # Convierte la imagen a escala de grises
+    grayscale_image = image.convert("L")
+    
+    # Obtiene las dimensiones de la imagen
+    width, height = grayscale_image.size
+    
+    # Abre el archivo MIF para escritura
+    with open(output_path, "w") as mif_file:
+        # Escribe el ancho y alto de la imagen
+        mif_file.write(f"WIDTH = 32;\n")
+        mif_file.write(f"DEPTH = {width * height};\n")
+        mif_file.write(f"ADDRESS_RADIX = UNS;\n")
+        mif_file.write(f"DATA_RADIX = UNS;\n")
+        mif_file.write(f"CONTENT BEGIN\n")
+        
+        # Itera sobre cada píxel y escribe su valor en el archivo MIF
+        for address in range(0, width * height):
+            x = address % width
+            y = address // width
+            pixel_value = grayscale_image.getpixel((x, y))
+            mif_file.write(f"\t{address+address*3:d} : {pixel_value:03d};\n")
+        
+        mif_file.write(f"END;\n")
 
 # Ejemplo de uso
-imagen_path = 'img1.png'  # Reemplaza con la ruta de tu imagen
-txt_path = 'memRam.mif'  # Reemplaza con el nombre que desees para el archivo de texto
+image_to_grayscale_mif("img1.png", "memRam.mif")
 
-guardar_pixeles_en_txt(imagen_path, txt_path)
+
+
 
 
 
