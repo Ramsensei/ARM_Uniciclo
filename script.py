@@ -12,20 +12,27 @@ def guardar_pixeles_en_txt(imagen_path, txt_path):
 
     # Obtener el ancho y alto de la imagen
     ancho, alto = imagen_gris.size
+    num_pixeles = len(pixeles_grises)
 
     # Crear o abrir un archivo de texto para escribir los valores de los píxeles
     with open(txt_path, 'w') as archivo_txt:
-        # Escribir el ancho, alto y número de píxeles en la primera línea
-        archivo_txt.write(f"{ancho}\n{alto}\n{len(pixeles_grises)}\n")
+        archivo_txt.write(f"WIDTH=32;\nDEPTH=32768;\nADDRESS_RADIX=UNS;\nDATA_RADIX=UNS;\nCONTENT BEGIN\n")
+        archivo_txt.write(f"\t0      :   {ancho};\n")
+        archivo_txt.write(f"\t1      :   {alto};\n")
+        archivo_txt.write(f"\t2      :   {num_pixeles};\n")
 
-        # Escribir los valores de los píxeles en líneas separadas
-        for pixel in pixeles_grises:
-            archivo_txt.write(f"{pixel}\n")
+        # Escribir los valores de los píxeles en el formato especificado
+        for i, pixel in enumerate(pixeles_grises):
+            archivo_txt.write(f"\t{i+3}      :   {pixel};\n")
+
+        archivo_txt.write("END;")
+        
 
 # Ejemplo de uso
-imagen_path = 'imagenPrueba.png'  # Reemplaza con la ruta de tu imagen
-txt_path = 'pixeles_en_gris.txt'  # Reemplaza con el nombre que desees para el archivo de texto
+imagen_path = 'img1.png'  # Reemplaza con la ruta de tu imagen
+txt_path = 'memRam.mif'  # Reemplaza con el nombre que desees para el archivo de texto
 
 guardar_pixeles_en_txt(imagen_path, txt_path)
+
 
 
