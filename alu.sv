@@ -23,13 +23,13 @@ module alu(input logic [31:0] SrcA, SrcB,
 			  
 			  assign ALUResult = mux4_output;
 			  
-			  initial begin
-			   #10;
-			   $display("sum = %h" ,sum_output);
-				$display("cou = %h" ,cout);
-				$display("mux2 = %h" ,mux_output);
-				$display("mux4 = %h" ,mux4_output);
-				$display("ALU = %h" ,ALUResult);
-				end
+//			  initial begin
+//			   #10;
+//			   $display("sum = %h" ,sum_output);
+//				$display("cou = %h" ,cout);
+//				$display("mux2 = %h" ,mux_output);
+//				$display("mux4 = %h" ,mux4_output);
+//				$display("ALU = %h" ,ALUResult);
+//				end
 				
 			  endmodule
