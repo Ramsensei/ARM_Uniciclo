@@ -14,7 +14,7 @@ def image_to_grayscale_mif(image_path, output_path):
     with open(output_path, "w") as mif_file:
         # Escribe el ancho y alto de la imagen
         mif_file.write(f"WIDTH = 32;\n")
-        mif_file.write(f"DEPTH = {width * height};\n")
+        mif_file.write(f"DEPTH = 65536;\n")
         mif_file.write(f"ADDRESS_RADIX = UNS;\n")
         mif_file.write(f"DATA_RADIX = UNS;\n")
         mif_file.write(f"CONTENT BEGIN\n")

@@ -23,5 +23,6 @@ DATA_RADIX=UNS;
 
 CONTENT BEGIN
 	0     :   1;
-	[1..1023]  :   0;
+	1     :   2;
+	[2..1023]  :   0;
 END;
