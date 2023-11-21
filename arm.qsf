@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 5CGXFC7C7F23C8
 set_global_assignment -name TOP_LEVEL_ENTITY alu
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:58:03  OCTOBER 24, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.2 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -57,20 +57,13 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH ram_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_NAME alu_testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id alu_testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME alu_testbench -section_id alu_testbench
-set_global_assignment -name EDA_TEST_BENCH_NAME mux4_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mux4_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mux4_tb -section_id mux4_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE ram_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alu_adder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alu_testbench.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
@@ -91,20 +84,12 @@ set_global_assignment -name SYSTEMVERILOG_FILE dmem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE adder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux4.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux4_tb.sv
-set_global_assignment -name MIF_FILE memRom.mif
-set_global_assignment -name SYSTEMVERILOG_FILE top_module.sv
-set_global_assignment -name MIF_FILE memRam.mif
-set_global_assignment -name SYSTEMVERILOG_FILE hhclock.sv
-set_global_assignment -name SYSTEMVERILOG_FILE write_mem.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux_21.sv
-set_global_assignment -name SYSTEMVERILOG_FILE counter.sv
-set_global_assignment -name QIP_FILE ram.qip
-set_global_assignment -name QIP_FILE rom.qip
-set_global_assignment -name SYSTEMVERILOG_FILE vga.sv
-set_global_assignment -name SYSTEMVERILOG_FILE vgaController.sv
-set_global_assignment -name SYSTEMVERILOG_FILE videoGen.sv
-set_global_assignment -name SYSTEMVERILOG_FILE chargenrom.sv
-set_global_assignment -name SYSTEMVERILOG_FILE rectgen.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME mux4_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mux4_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mux4_tb -section_id mux4_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE testbench.sv -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE top.sv -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE adder.sv -section_id testbench
@@ -128,9 +113,14 @@ set_global_assignment -name EDA_TEST_BENCH_FILE alu_testbench.sv -section_id alu
 set_global_assignment -name EDA_TEST_BENCH_FILE mux4.sv -section_id mux4_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE mux4_tb.sv -section_id mux4_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE mux2.sv -section_id mux4_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME ram_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ram_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ram_tb -section_id ram_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE ram_tb.sv -section_id ram_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE ram.v -section_id ram_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name MIF_FILE memRom.mif
+set_global_assignment -name SYSTEMVERILOG_FILE top_module.sv
+set_global_assignment -name MIF_FILE memRam.mif
+set_global_assignment -name SYSTEMVERILOG_FILE hhclock.sv
+set_global_assignment -name SYSTEMVERILOG_FILE write_mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux_21.sv
+set_global_assignment -name SYSTEMVERILOG_FILE counter.sv
+set_global_assignment -name QIP_FILE ram.qip
+set_global_assignment -name QIP_FILE rom.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ram_tb.sv
