@@ -9,10 +9,10 @@ always @(posedge clk)
 begin
 	if (count = 15000000) begin
 		count <= 1;
-		seconds <seconds;
+		seconds <= ~seconds;
 	end else begin
 		count <= count + 1;
 	end
+end
 
-	end
 endmodule

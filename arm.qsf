@@ -123,3 +123,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE mux_21.sv
 set_global_assignment -name SYSTEMVERILOG_FILE counter.sv
 set_global_assignment -name QIP_FILE ram.qip
 set_global_assignment -name QIP_FILE rom.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ram_tb.sv
