@@ -3,6 +3,8 @@ input logic [31:0] a, wd,
 output logic [31:0] rd);
 	logic [31:0] RAM[63:0];
 	
+	//ram ram_instance(a,clk,wd,we,rd);
+	
 	assign rd = RAM[a[31:2]]; // word aligned
 	
 	always_ff @(posedge clk)

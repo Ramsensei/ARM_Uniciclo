@@ -1,5 +1,5 @@
 Flow report for arm
-Mon Nov 20 20:25:04 2023
+Tue Nov 21 03:10:07 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -41,12 +41,12 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Flow Failed - Mon Nov 20 20:25:04 2023         ;
+; Flow Status                 ; Successful - Tue Nov 21 03:10:07 2023          ;
 ; Quartus Prime Version       ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name               ; arm                                            ;
-; Top-level Entity Name       ; alu                                            ;
+; Top-level Entity Name       ; rom_tb                                         ;
 ; Family                      ; Cyclone V                                      ;
-; Device                      ; 5CGXFC7C7F23C8                                 ;
+; Device                      ; 5CSEMA5F31C6                                   ;
 ; Timing Models               ; Final                                          ;
 ; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
 ; Total registers             ; N/A until Partition Merge                      ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/20/2023 20:24:47 ;
+; Start date & time ; 11/21/2023 03:09:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; arm                 ;
 +-------------------+---------------------+
@@ -74,7 +74,8 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 79846615792679.170053348725532         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 79846615792679.170055779420452         ; --            ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; rom_tb                            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ram_tb                            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mux4_tb                           ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_testbench                     ;
@@ -83,11 +84,15 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; ram_tb                                 ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; rom_tb                                 ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim (SystemVerilog)               ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; rom_tb.sv                              ; --            ; --          ; rom_tb                            ;
+; EDA_TEST_BENCH_FILE                  ; memRom.mif                             ; --            ; --          ; rom_tb                            ;
+; EDA_TEST_BENCH_FILE                  ; rom.v                                  ; --            ; --          ; rom_tb                            ;
 ; EDA_TEST_BENCH_FILE                  ; ram_tb.sv                              ; --            ; --          ; ram_tb                            ;
+; EDA_TEST_BENCH_FILE                  ; memRam.mif                             ; --            ; --          ; ram_tb                            ;
 ; EDA_TEST_BENCH_FILE                  ; ram.v                                  ; --            ; --          ; ram_tb                            ;
 ; EDA_TEST_BENCH_FILE                  ; mux4.sv                                ; --            ; --          ; mux4_tb                           ;
 ; EDA_TEST_BENCH_FILE                  ; mux4_tb.sv                             ; --            ; --          ; mux4_tb                           ;
@@ -112,6 +117,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_FILE                  ; mux4.sv                                ; --            ; --          ; testbench                         ;
 ; EDA_TEST_BENCH_FILE                  ; regfile.sv                             ; --            ; --          ; testbench                         ;
 ; EDA_TEST_BENCH_FILE                  ; alu.sv                                 ; --            ; --          ; testbench                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; rom_tb                                 ; --            ; --          ; rom_tb                            ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; ram_tb                                 ; --            ; --          ; ram_tb                            ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; mux4_tb                                ; --            ; --          ; mux4_tb                           ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; alu_testbench                          ; --            ; --          ; alu_testbench                     ;
@@ -120,18 +126,19 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_NAME                  ; alu_testbench                          ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; mux4_tb                                ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; ram_tb                                 ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; rom_tb                                 ; --            ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
 ; MISC_FILE                            ; ram_bb.v                               ; --            ; --          ; --                                ;
 ; MISC_FILE                            ; rom_bb.v                               ; --            ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; alu         ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; alu         ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; alu         ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; rom_tb      ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; rom_tb      ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; rom_tb      ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; alu                                    ; arm           ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; rom_tb                                 ; arm           ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -140,8 +147,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 4797 MB             ; 00:00:30                           ;
-; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:30                           ;
+; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 4807 MB             ; 00:00:16                           ;
+; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:16                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

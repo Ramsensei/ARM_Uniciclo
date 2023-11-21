@@ -1,5 +1,5 @@
 Analysis & Elaboration report for arm
-Mon Nov 20 20:25:04 2023
+Tue Nov 21 03:10:07 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -9,9 +9,14 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
-  6. Analysis & Elaboration Suppressed Messages
+  4. Analysis & Elaboration IP Cores Summary
+  5. Source assignments for rom:mem|altsyncram:altsyncram_component|altsyncram_dag1:auto_generated
+  6. Parameter Settings for User Entity Instance: rom:mem|altsyncram:altsyncram_component
+  7. altsyncram Parameter Settings by Entity Instance
+  8. Analysis & Elaboration Settings
+  9. Port Connectivity Checks: "rom:mem"
+ 10. Analysis & Elaboration Messages
+ 11. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -38,10 +43,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Mon Nov 20 20:25:04 2023              ;
+; Analysis & Elaboration Status ; Successful - Tue Nov 21 03:10:07 2023          ;
 ; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                 ; arm                                            ;
-; Top-level Entity Name         ; alu                                            ;
+; Top-level Entity Name         ; rom_tb                                         ;
 ; Family                        ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
 ; Total registers               ; N/A until Partition Merge                      ;
@@ -69,13 +74,112 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++---------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                           ;
++--------+--------------+---------+--------------+--------------+-----------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance ; IP Include File ;
++--------+--------------+---------+--------------+--------------+-----------------+-----------------+
+; Altera ; ROM: 1-PORT  ; 22.1    ; N/A          ; N/A          ; |rom_tb|rom:mem ; rom.v           ;
++--------+--------------+---------+--------------+--------------+-----------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Source assignments for rom:mem|altsyncram:altsyncram_component|altsyncram_dag1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------+
+; Assignment                      ; Value              ; From ; To                              ;
++---------------------------------+--------------------+------+---------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                               ;
++---------------------------------+--------------------+------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rom:mem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------+
+; Parameter Name                     ; Value                ; Type                     ;
++------------------------------------+----------------------+--------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                  ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                  ;
+; WIDTH_A                            ; 8                    ; Signed Integer           ;
+; WIDTHAD_A                          ; 16                   ; Signed Integer           ;
+; NUMWORDS_A                         ; 65536                ; Signed Integer           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                  ;
+; WIDTH_B                            ; 1                    ; Untyped                  ;
+; WIDTHAD_B                          ; 1                    ; Untyped                  ;
+; NUMWORDS_B                         ; 1                    ; Untyped                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                  ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                  ;
+; INIT_FILE                          ; memRom.mif           ; Untyped                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                  ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                  ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_dag1      ; Untyped                  ;
++------------------------------------+----------------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                    ;
++-------------------------------------------+-----------------------------------------+
+; Name                                      ; Value                                   ;
++-------------------------------------------+-----------------------------------------+
+; Number of entity instances                ; 1                                       ;
+; Entity Instance                           ; rom:mem|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                     ;
+;     -- WIDTH_A                            ; 8                                       ;
+;     -- NUMWORDS_A                         ; 65536                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                            ;
+;     -- WIDTH_B                            ; 1                                       ;
+;     -- NUMWORDS_B                         ; 1                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                               ;
++-------------------------------------------+-----------------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; alu                ; arm                ;
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; rom_tb             ; arm                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -156,18 +260,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rom:mem"                                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Nov 20 20:24:46 2023
+    Info: Processing started: Tue Nov 21 03:09:54 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arm -c arm --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file ram_tb.sv
-    Info (12023): Found entity 1: ram_tb File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/ram_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_adder.sv
     Info (12023): Found entity 1: alu_adder File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/alu_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_testbench.sv
@@ -217,30 +328,51 @@ Info (12021): Found 1 design units, including 1 entities, in source file write_m
     Info (12023): Found entity 1: write_mem File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/write_mem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_21.sv
     Info (12023): Found entity 1: mux_21 File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/mux_21.sv Line: 1
-Error (10170): Verilog HDL syntax error at counter.sv(5) near text: "h00";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/counter.sv Line: 5
-Error (10170): Verilog HDL syntax error at counter.sv(7) near text: "+";  expecting "<=", or "=", or "+=", or "-=", or "*=", or "/=", or "%=", or "&=", or "|=", or "^=", or "<<=", or ">>=", or "<<<=", or ">>>=", or "++", or "--". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/counter.sv Line: 7
-Error (10112): Ignored design unit "counter" at counter.sv(1) due to previous errors File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/counter.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file counter.sv
+Info (12021): Found 1 design units, including 1 entities, in source file counter.sv
+    Info (12023): Found entity 1: counter File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ram_tb.sv
+    Info (12023): Found entity 1: ram_tb File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/ram_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
     Info (12023): Found entity 1: ram File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/ram.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file rom.v
     Info (12023): Found entity 1: rom File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/rom.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
-    Info (12023): Found entity 1: vga File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/vga.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
-    Info (12023): Found entity 1: vgaController File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/vgaController.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file videogen.sv
-    Info (12023): Found entity 1: videoGen File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/videoGen.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file chargenrom.sv
-    Info (12023): Found entity 1: chargenrom File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/chargenrom.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file rectgen.sv
-    Info (12023): Found entity 1: rectgen File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/rectgen.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rom_tb.sv
+    Info (12023): Found entity 1: rom_tb File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/rom_tb.sv Line: 1
+Info (12127): Elaborating entity "rom_tb" for the top level hierarchy
+Info (12128): Elaborating entity "rom" for hierarchy "rom:mem" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/rom_tb.sv Line: 6
+Info (12128): Elaborating entity "altsyncram" for hierarchy "rom:mem|altsyncram:altsyncram_component" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/rom.v Line: 82
+Info (12130): Elaborated megafunction instantiation "rom:mem|altsyncram:altsyncram_component" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/rom.v Line: 82
+Info (12133): Instantiated megafunction "rom:mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/rom.v Line: 82
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "memRom.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "65536"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "16"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_dag1.tdf
+    Info (12023): Found entity 1: altsyncram_dag1 File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/db/altsyncram_dag1.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_dag1" for hierarchy "rom:mem|altsyncram:altsyncram_component|altsyncram_dag1:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Critical Warning (127005): Memory depth (65536) in the design file differs from memory depth (65535) in the Memory Initialization File "C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/memRom.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/rom.v Line: 82
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_61a.tdf
+    Info (12023): Found entity 1: decode_61a File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/db/decode_61a.tdf Line: 23
+Info (12128): Elaborating entity "decode_61a" for hierarchy "rom:mem|altsyncram:altsyncram_component|altsyncram_dag1:auto_generated|decode_61a:rden_decode" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/db/altsyncram_dag1.tdf Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_tfb.tdf
+    Info (12023): Found entity 1: mux_tfb File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/db/mux_tfb.tdf Line: 23
+Info (12128): Elaborating entity "mux_tfb" for hierarchy "rom:mem|altsyncram:altsyncram_component|altsyncram_dag1:auto_generated|mux_tfb:mux2" File: C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/db/altsyncram_dag1.tdf Line: 41
 Info (144001): Generated suppressed messages file C:/Users/joedu/OneDrive/Escritorio/ARM_Uniciclo/output_files/arm.map.smsg
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 3 errors, 1 warning
-    Error: Peak virtual memory: 4797 megabytes
-    Error: Processing ended: Mon Nov 20 20:25:04 2023
-    Error: Elapsed time: 00:00:18
-    Error: Total CPU time (on all processors): 00:00:30
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Tue Nov 21 03:10:07 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +--------------------------------------------+
