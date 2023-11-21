@@ -22,4 +22,5 @@ always @ (btn) begin
 			data = 7'd9;
 		end
 	endcase
+	end
 endmodule
