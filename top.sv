@@ -1,6 +1,6 @@
 module top(input logic clk, reset,
-				output logic [31:0] WriteData, DataAdr,
-				output logic MemWrite,
+//				output logic [31:0] WriteData, DataAdr,
+//				output logic MemWrite,
 				output logic vgaclk, // 25.175 MHz VGA clock
 				output logic hsync, vsync,
 				output logic sync_b, blank_b,
@@ -9,8 +9,8 @@ module top(input logic clk, reset,
 //);
 				
 logic [31:0] PC, Instr, ReadData, VGAAddr, ARMAddr;
-// WriteData, DataAdr;
-//logic MemWrite;
+logic [31:0] WriteData, DataAdr;
+logic MemWrite;
 logic cs, AddrSel;
 // instantiate processor and memories
 arm arm(clk, reset, PC, Instr, MemWrite, ARMAddr,

@@ -15,5 +15,5 @@ pll vgapll(.inclk0(clk), .c0(vgaclk));
 // Generate monitor timing signals
 vgaController vgaCont(vgaclk, hsync, vsync, sync_b, blank_b, x, y);
 // User-defined module to determine pixel color
-videoGen videoGen(x, y, r, g, b);
+videoGen videoGen(x, y, ReadData, r, g, b, DataAdr);
 endmodule
