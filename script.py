@@ -24,7 +24,7 @@ def image_to_grayscale_mif(image_path, output_path):
             x = address % width
             y = address // width
             pixel_value = grayscale_image.getpixel((x, y))
-            mif_file.write(f"\t{address+address*3:d} : {pixel_value:03d};\n")
+            mif_file.write(f"\t{address:d} : {pixel_value:03d};\n")
         
         mif_file.write(f"END;\n")
 
