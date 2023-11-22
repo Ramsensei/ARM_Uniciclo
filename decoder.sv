@@ -4,7 +4,8 @@ module decoder(input logic [1:0] Op,
 					output logic [1:0] FlagW,
 					output logic PCS, RegW, MemW,
 					output logic MemtoReg, ALUSrc,
-					output logic [1:0] ImmSrc, RegSrc, ALUControl);
+					output logic [1:0] ImmSrc, RegSrc, ALUControl,
+					output logic cs);
 					
 logic [9:0] controls;
 logic Branch, ALUOp;
@@ -12,21 +13,22 @@ logic Branch, ALUOp;
 always_comb
 casex(Op)
 		// Data-processing immediate
-		2'b00: if (Funct[5]) controls = 10'b0000101001;
+		2'b00: if (Funct[5]) controls = 11'b00001010010;
 		// Data-processing register
-		else controls = 10'b0000001001;
+		else controls = 11'b00000010010;
 		// LDR
-		2'b01: if (Funct[0]) controls = 10'b0001111000;
+		2'b01: if (Funct[0]) controls = 11'b00011110000;
 		// STR
-		else controls = 10'b1001110100;
+		else controls = 11'b10011101000;
 		// B
-		2'b10: controls = 10'b0110100010;
+		2'b10: controls = 11'b01101000100;
 		// Unimplemented
-		default: controls = 10'bx;
+		2'b11: controls = 11'b00000000001;
+		default: controls = 11'bx;
 endcase
 
 assign {RegSrc, ImmSrc, ALUSrc, MemtoReg,
-RegW, MemW, Branch, ALUOp} = controls;
+RegW, MemW, Branch, ALUOp, cs} = controls;
 
 // ALU Decoder
 always_comb

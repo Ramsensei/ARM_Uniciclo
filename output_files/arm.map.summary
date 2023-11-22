@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Tue Nov 21 03:10:07 2023
+Analysis & Elaboration Status : Successful - Tue Nov 21 19:44:13 2023
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : arm
-Top-level Entity Name : rom_tb
+Top-level Entity Name : top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

@@ -29,7 +29,7 @@ def image_to_grayscale_mif(image_path, output_path):
         mif_file.write(f"END;\n")
 
 # Ejemplo de uso
-image_to_grayscale_mif("img1.png", "memRam.mif")
+image_to_grayscale_mif("C:\Users\joedu\OneDrive\Escritorio\ARM_Uniciclo\marylin_manson.png", "memRam.mif")
 
 
 

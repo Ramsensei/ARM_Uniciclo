@@ -1,4 +1,6 @@
 module vga(input logic clk,
+input logic [31:0] ReadData,
+output logic [31:0] DataAdr,
 output logic vgaclk, // 25.175 MHz VGA clock
 output logic hsync, vsync,
 output logic sync_b, blank_b, // To monitor & DAC

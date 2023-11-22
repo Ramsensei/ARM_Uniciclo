@@ -22,9 +22,11 @@ end
 end
 
 // Compute sync signals (active low)
-assign hsync = ~(hcnt >= HACTIVE + HFP & hcnt < HACTIVE + HFP + HSYN);
-assign vsync = ~(vcnt >= VACTIVE + VFP & vcnt < VACTIVE + VFP + VSYN);
+assign hsync = ~(x >= HACTIVE + HFP & x < HACTIVE + HFP + HSYN);
+
+assign vsync = ~(y >= VACTIVE + VFP & y < VACTIVE + VFP + VSYN);
+
 assign sync_b = hsync & vsync;
 // Force outputs to black when outside the legal display area
-assign blank_b = (hcnt < HACTIVE) & (vcnt < VACTIVE);
+assign blank_b = (x < HACTIVE) & (y < VACTIVE);
 endmodule

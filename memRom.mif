@@ -19,11 +19,16 @@ WIDTH=8;
 DEPTH=65535;
 
 ADDRESS_RADIX=UNS;
-DATA_RADIX=UNS;
+DATA_RADIX=HEX;
 
 CONTENT BEGIN
-	0      :   255;
-	1      :   8;
-	2      :   4;
-	[3..65534]  :   0;
+	0      :   E0;
+	1      :   4F;
+	2      :   00;
+	3      :   0F;
+	4      :   E2;
+	5      :   80;
+        6      :   20;
+        7      :   05;
+        [8..65534]  :   0;
 END;
